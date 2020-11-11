@@ -8,7 +8,7 @@ const List = ({coupons}) =>{
           <div className="col">
             {coupons.map((value, index)=>{
               return (
-              <Tile data={value}></Tile>
+              <Tile key={index} data={value}></Tile>
               );
             })}
           </div>

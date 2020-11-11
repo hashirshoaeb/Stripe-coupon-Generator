@@ -10,9 +10,13 @@ import Add from "./components/Modal";
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [couponList , setcouponList] = useState([{"id": "25_5OFF","name": "25.5% off",}, {"id": "25_5OFF","name": "25.5% off",}, {"id": "25_5OFF","name": "25.5% off",}]);
+  
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
-  const handleSave = () => setShowModal(false);
+  const handleSave = (data) => { 
+    couponList.push(data); 
+    setShowModal(false)
+  };
 
   return (
     <div className="App">

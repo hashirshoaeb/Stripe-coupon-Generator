@@ -1,5 +1,4 @@
 const Tile =({data}) => {
-  console.log(data);
   return (
     <div className="card">
       <div className="card-body">
