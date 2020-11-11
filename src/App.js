@@ -1,14 +1,15 @@
 import React, {useState} from "react";
+import { Modal } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
+// Files
 import './App.css';
+import List from './components/List';
 import Add from "./components/Modal";
-import { Modal } from "react-bootstrap";
-
 
 function App() {
   const [showModal, setShowModal] = useState(false);
-
+  const [couponList , setcouponList] = useState([{"id": "25_5OFF","name": "25.5% off",}, {"id": "25_5OFF","name": "25.5% off",}, {"id": "25_5OFF","name": "25.5% off",}]);
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
   const handleSave = () => setShowModal(false);
@@ -24,6 +25,7 @@ function App() {
       <Modal show={showModal} onHide={handleClose}>
         <Add handleClose={handleClose} handleSave={handleSave}></Add>
       </Modal>
+      <List coupons={couponList}></List> 
     </div>
   );
 }
