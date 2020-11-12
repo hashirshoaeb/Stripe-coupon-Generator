@@ -5,14 +5,14 @@ const Tile = ({ data, handleDelete }) => {
     <Card>
       <Card.Header>
         <Container>
-        <Row>
-          <Accordion.Toggle as={Col} md={8} eventKey={data.id}>
-            <p className="lead">{data.name}</p>
-          </Accordion.Toggle>
-          <Col md={4} className="btn btn-danger" onClick={handleDelete}>
-            Delete
-          </Col>
-        </Row>
+          <Row>
+            <Accordion.Toggle as={Col} md={8} eventKey={data.id}>
+              <p className="lead">{data.name}</p>
+            </Accordion.Toggle>
+            <Col md={4} className="btn btn-danger" onClick={handleDelete}>
+              Delete
+            </Col>
+          </Row>
         </Container>
       </Card.Header>
       <Accordion.Collapse eventKey={data.id}>
